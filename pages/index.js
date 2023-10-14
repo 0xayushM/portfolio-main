@@ -8,6 +8,21 @@ import { fadeIn } from '../variants'
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
+      <div className="w-full h-full bg-gradeint-to-r from-primary/10 via-black/30 to-black/10">
+        <div className="text-center flex flex-col h-full justify-center xl:pt-20 xl:text-left container mx-auto">
+          <h1 className="h1">
+            Transforming Ideas <br/> Into{' '}
+            <span className="text-accent">Digital Reality</span>
+          </h1>
+          <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div className="flex justify-center xl:hidden relative">
+            <ProjectsBtn/>
+          </div>
+          <motion.div variants={fadeIn('down',0.4)} initial='hidden' animate='show' exit='hidden' className="hidden xl:flex">
+            <ProjectsBtn/>
+          </motion.div>
+        </div>
+      </div>
 
     </div>
   )
