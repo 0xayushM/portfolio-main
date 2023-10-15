@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-key */
 // icons
+import { useState } from "react";
 import {
   FaHtml5,
   FaCss3,
@@ -40,19 +42,6 @@ const aboutData = [
     ],
   },
   {
-    title: 'awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
-      },
-    ],
-  },
-  {
     title: 'experience',
     info: [
       {
@@ -88,8 +77,16 @@ const aboutData = [
   },
 ];
 
+import Circles from '../../components/Circles'
+
 const About = () => {
-  return <div>About</div>;
+  const [index, setIndex] = useState(0)
+  return (
+    <div>
+      <Circles/>
+
+    </div>
+  )
 };
 
 export default About;
